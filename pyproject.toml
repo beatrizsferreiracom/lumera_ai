@@ -1,0 +1,11 @@
+[project]
+name = "lumera-ai"
+version = "0.1.0"
+description = "Multi-agent book recommendation system powered by CrewAI"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "crewai>=1.15.44",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
