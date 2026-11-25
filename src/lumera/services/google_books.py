@@ -3,19 +3,11 @@ import requests
 from dotenv import load_dotenv
 
 from lumera.models import Book
+from lumera.utils.languages import normalize_language
 
 load_dotenv()
 
 BASE_URL = "https://www.googleapis.com/books/v1/volumes"
-
-def normalize_language(language: str | None) -> str | None:
-    """Normaliza o codigo de idioma para comparacao."""
-
-    if not language: 
-        return None
-
-    return language.strip().replace("_", "-").split("-")[0].lower()
-
 
 def search_google_books(
     query: str,
